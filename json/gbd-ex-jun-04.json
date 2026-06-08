@@ -152,7 +152,7 @@
 {
 "q": "¿Qué sucede cuando ejecutas una subconsulta escalar en la lista SELECT de otra consulta?",
 "o": [
-"Calcula un valor por cada fila devolvida añadiendo columnas adicionales derivadas de subconsultas relacionadas",
+"Calcula un valor por cada fila devuelta añadiendo columnas adicionales derivadas de subconsultas relacionadas",
 "Devuelve un error porque no se permiten subconsultas en SELECT",
 "Solo devuelve un valor único para toda la consulta",
 "Devuelve una tabla temporal que debe filtrarse con WHERE"
