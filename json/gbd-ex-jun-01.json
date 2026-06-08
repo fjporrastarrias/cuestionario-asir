@@ -1,6 +1,3 @@
-Perfecto. Voy a leer ambos documentos para extraer el contenido teórico necesario.
-He leído ambos documentos correctamente. Ahora voy a generar un cuestionario de 20 preguntas basadas exclusivamente en el contenido teórico de GDB (Gestión de Bases de Datos) sobre sentencias SQL y scripts, con respuestas correctas del documento y distractores erróneos pero plausibles.
-
 [
 {
 "q": "¿Cuál es la principal diferencia entre las sentencias SELECT 10 + 6 / 2 y SELECT (10 + 6) / 2?",
