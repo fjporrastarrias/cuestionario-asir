@@ -17,21 +17,21 @@
     {
         "id": "gbd-ex-jun-01",
         "name": "CUESTIONARIO GBD EX-JUN 01",
-        "file": "json/gbd-ex-jun-01.json.json"
+        "file": "json/gbd-ex-jun-01.json"
     },
     {
         "id": "gbd-ex-jun-02",
         "name": "CUESTIONARIO GBD EX-JUN 02",
-        "file": "json/gbd-ex-jun-02.json.json"
+        "file": "json/gbd-ex-jun-02.json"
     },
     {
         "id": "gbd-ex-jun-03",
         "name": "CUESTIONARIO GBD EX-JUN 03",
-        "file": "json/gbd-ex-jun-03.json.json"
+        "file": "json/gbd-ex-jun-03.json"
     },
     {
         "id": "gbd-ex-jun-04",
         "name": "CUESTIONARIO GBD EX-JUN 04",
-        "file": "json/gbd-ex-jun-04.json.json"
+        "file": "json/gbd-ex-jun-04.json"
     }
 ]
