@@ -1,7 +1,32 @@
 [
     {
-        "id": "dig-01",
-        "name": "DIG-01",
-        "file": "json/dig-01.json"
+        "q": "¿Qué ventaja principal ofrece el uso de invernaderos según el texto?",
+        "o": [
+            "Permiten cultivar independientemente de las condiciones climáticas todo el año.",
+            "Reducen los impuestos agrícolas al ser estructuras cerradas.",
+            "Eliminan por completo la necesidad de regar los cultivos.",
+            "Permiten cultivar exclusivamente tomates en la región de Murcia."
+        ],
+        "a": 0
+    },
+    {
+        "q": "¿Qué tecnología se menciona para maximizar el uso eficiente del agua y nutrientes?",
+        "o": [
+            "Riego por goteo y fertirrigación.",
+            "Sistemas de aspersión de alto volumen.",
+            "Canales de inundación hidropónicos.",
+            "Riego manual con mangueras de presión."
+        ],
+        "a": 0
+    },
+    {
+        "q": "En el objetivo estratégico de 'Sostenibilidad', ¿qué fuentes de energía renovable se sugieren integrar?",
+        "o": [
+            "Paneles solares y sistemas de biomasa.",
+            "Turbinas eólicas y energía geotérmica.",
+            "Reactores nucleares a pequeña escala.",
+            "Generadores diésel de bajas emisiones."
+        ],
+        "a": 0
     }
 ]
