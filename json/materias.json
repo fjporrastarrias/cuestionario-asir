@@ -4,25 +4,21 @@
         "name": "DIG-01",
         "file": "json/dig-01.json"
     },
-
     {
         "id": "dig-02",
         "name": "DIG-02",
         "file": "json/dig-02.json"
     },
-
     {
         "id": "dig-03",
         "name": "DIG-03",
         "file": "json/gbd-ex-jun-01.json"
     },
-
     {
         "id": "gbd-ex-jun-01",
         "name": "CUESTIONARIO GBD EX-JUN 01",
         "file": "json/gbd-ex-jun-01.json.json"
     },
-
     {
         "id": "gbd-ex-jun-02",
         "name": "CUESTIONARIO GBD EX-JUN 02",
