@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Tests: Exámenes Junio</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg: #fff;
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --error: #e74c3c;
+            --border: #ddd;
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1a2e;
+            --text-color: #e6e6e6;
+            --card-bg: #16213e;
+            --primary: #e94560;
+            --accent: #0f3460;
+            --success: #2ecc71;
+            --error: #ff4757;
+            --border: #2c3e50;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--border);
+        }
+        h1, h2, h3 { color: var(--primary); margin: 0; }
+        .theme-toggle {
+            background: var(--card-bg); color: var(--text-color);
+            border: 1px solid var(--border); padding: 8px 15px; border-radius: 20px;
+            cursor: pointer; font-weight: bold;
+        }
+        .info-panel {
+            background: var(--card-bg); padding: 25px; border-radius: 8px;
+            margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;
+        }
+        select {
+            width: 100%; padding: 12px; font-size: 1.1em; margin: 15px 0;
+            border-radius: 5px; border: 1px solid var(--border);
+            background: var(--bg-color); color: var(--text-color);
+        }
+        .question-card {
+            background: var(--card-bg); padding: 20px; border-radius: 8px;
+            margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .question-text { font-size: 1.1em; font-weight: bold; margin-bottom: 15px; }
+        .options { display: flex; flex-direction: column; gap: 10px; }
+        .option-label {
+            display: flex; align-items: center; padding: 12px; border: 1px solid var(--border);
+            border-radius: 5px; cursor: pointer; transition: background 0.2s;
+        }
+        .option-label:hover { background: var(--bg-color); }
+        input[type="radio"] { margin-right: 10px; }
+        .btn {
+            background: var(--accent); color: white; border: none; padding: 12px 25px;
+            font-size: 1.1em; border-radius: 5px; cursor: pointer; display: block;
+            width: 100%; margin-top: 20px; text-align: center; text-decoration: none;
+        }
+        .btn:hover { opacity: 0.9; }
+        .btn-secondary { background: #7f8c8d; }
+        .btn-perplexity {
+            background: #202327; font-size: 0.9em; padding: 8px 15px;
+            margin-top: 10px; display: inline-block; width: auto;
+        }
+        .results-summary {
+            display: flex; justify-content: space-around; background: var(--card-bg);
+            padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .stat { text-align: center; font-size: 1.2em; font-weight: bold; }
+        .stat span { display: block; font-size: 2em; }
+        .stat.correct span { color: var(--success); }
+        .stat.incorrect span { color: var(--error); }
+        .stat.unanswered span { color: gray; }
+        .result-item {
+            background: var(--card-bg); padding: 15px; border-radius: 8px;
+            margin-bottom: 15px; border-left: 5px solid gray;
+        }
+        .result-item.correct { border-left-color: var(--success); }
+        .result-item.incorrect { border-left-color: var(--error); }
+        .correct-text { color: var(--success); font-weight: bold; }
+        .error-text { color: var(--error); font-weight: bold; }
+        
+        #start-container, #quiz-container, #results-container { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h2>Simulador de Exámenes</h2>
+        <button class="theme-toggle" id="theme-btn">Modo Oscuro</button>
+    </header>
+
+    <div id="subject-container" class="info-panel" style="display: block;">
+        <h3>Selecciona una Asignatura</h3>
+        <p>Elige la materia que deseas repasar.</p>
+        <select id="subject-select"></select>
+        <button class="btn" onclick="loadSubject()">Cargar Materia</button>
+    </div>
+
+    <div id="start-container" class="info-panel">
+        <h3 id="current-subject-title">Materia</h3>
+        <p>Progreso actual: <strong id="progress-text">0/0</strong> preguntas vistas.</p>
+        <button class="btn" onclick="startQuiz()">Comenzar Bloque de 20 Preguntas</button>
+        <button class="btn btn-secondary" onclick="resetProgress()">Reiniciar Progreso de esta Materia</button>
+        <button class="btn" style="background: transparent; color: var(--accent); border: 2px solid var(--accent);" onclick="returnToSubjects()">Cambiar de Asignatura</button>
+    </div>
+
+    <div id="quiz-container">
+        <div id="questions-wrapper"></div>
+        <button class="btn" onclick="submitQuiz()">Terminar y Evaluar</button>
+    </div>
+
+    <div id="results-container">
+        <h3>Resultados del Bloque</h3>
+        <div class="results-summary">
+            <div class="stat correct">Correctas<br><span id="res-correct">0</span></div>
+            <div class="stat incorrect">Erróneas<br><span id="res-incorrect">0</span></div>
+            <div class="stat unanswered">Sin contestar<br><span id="res-unanswered">0</span></div>
+        </div>
+        <div id="detailed-results"></div>
+        <button class="btn" onclick="returnToStart()">Hacer otro bloque de esta materia</button>
+        <button class="btn btn-secondary" onclick="returnToSubjects()">Volver a Selección</button>
+    </div>
+</div>
+
+<script>
+    // Catálogo apuntando a los archivos JSON
+    const subjectCatalog = [
+        { id: 'invernadero', name: 'Transformación Digital - Invernadero', file: 'json/invernadero.json' },
+        { id: 'redes', name: 'Redes Locales (Ejemplo)', file: 'json/redes.json' }
+    ];
+
+    let db = [];
+    let currentSubjectId = '';
+    let currentSubjectName = '';
+    let currentBlock = [];
+    let userAnswers = {};
+    const QUESTIONS_PER_BLOCK = 20;
+
+    window.onload = () => {
+        const select = document.getElementById('subject-select');
+        subjectCatalog.forEach(subj => {
+            let option = document.createElement('option');
+            option.value = subj.id;
+            option.textContent = subj.name;
+            select.appendChild(option);
+        });
+    };
+
+    // Uso de fetch() para obtener el JSON limpiamente desde el servidor
+    async function loadSubject() {
+        const select = document.getElementById('subject-select');
+        currentSubjectId = select.value;
+        const selectedSubject = subjectCatalog.find(s => s.id === currentSubjectId);
+        currentSubjectName = selectedSubject.name;
+
+        try {
+            const response = await fetch(selectedSubject.file);
+            if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
+            
+            db = await response.json();
+            
+            document.getElementById('subject-container').style.display = 'none';
+            document.getElementById('start-container').style.display = 'block';
+            document.getElementById('current-subject-title').innerText = currentSubjectName;
+            
+            updateProgressUI();
+        } catch (error) {
+            alert("Error al cargar los datos: " + error.message);
+        }
+    }
+
+    function getSeenQuestions() {
+        return JSON.parse(localStorage.getItem(`seenQuestions_${currentSubjectId}`)) || [];
+    }
+
+    function setSeenQuestions(seen) {
+        localStorage.setItem(`seenQuestions_${currentSubjectId}`, JSON.stringify(seen));
+    }
+
+    function updateProgressUI() {
+        const seen = getSeenQuestions();
+        document.getElementById('progress-text').innerText = `${seen.length}/${db.length}`;
+    }
+
+    function resetProgress() {
+        if(confirm(`¿Estás seguro de que quieres reiniciar tu progreso en "${currentSubjectName}"?`)) {
+            localStorage.removeItem(`seenQuestions_${currentSubjectId}`);
+            updateProgressUI();
+            alert("Progreso reiniciado.");
+        }
+    }
+
+    function startQuiz() {
+        document.getElementById('start-container').style.display = 'none';
+        document.getElementById('quiz-container').style.display = 'block';
+        
+        let seen = getSeenQuestions();
+        if (seen.length >= db.length) {
+            alert("¡Has completado todas las preguntas! Reiniciando el ciclo.");
+            seen = [];
+            setSeenQuestions(seen);
+        }
+
+        let availableQuestions = db.map((q, index) => ({...q, originalIndex: index}))
+                                   .filter(q => !seen.includes(q.originalIndex));
+        
+        availableQuestions.sort(() => Math.random() - 0.5);
+
+        currentBlock = availableQuestions.slice(0, Math.min(QUESTIONS_PER_BLOCK, availableQuestions.length));
+        
+        currentBlock.forEach(q => {
+            let optionsObj = q.o.map((text, idx) => ({text: text, isCorrect: idx === q.a}));
+            optionsObj.sort(() => Math.random() - 0.5);
+            q.shuffledOptions = optionsObj;
+        });
+
+        userAnswers = {};
+        renderQuestions();
+    }
+
+    function renderQuestions() {
+        const wrapper = document.getElementById('questions-wrapper');
+        wrapper.innerHTML = '';
+
+        currentBlock.forEach((q, index) => {
+            let html = `<div class="question-card">
+                            <div class="question-text">${index + 1}. ${q.q}</div>
+                            <div class="options">`;
+            
+            q.shuffledOptions.forEach((opt, optIndex) => {
+                html += `<label class="option-label">
+                            <input type="radio" name="q${index}" value="${optIndex}" onchange="saveAnswer(${index}, ${optIndex})">
+                            ${opt.text}
+                         </label>`;
+            });
+            html += `</div></div>`;
+            wrapper.innerHTML += html;
+        });
+    }
+
+    function saveAnswer(qIndex, optIndex) {
+        userAnswers[qIndex] = optIndex;
+    }
+
+    function submitQuiz() {
+        if(Object.keys(userAnswers).length < currentBlock.length) {
+            if(!confirm("Tienes preguntas sin contestar. ¿Entregar de todos modos?")) return;
+        }
+
+        let seen = getSeenQuestions();
+        currentBlock.forEach(q => {
+            if(!seen.includes(q.originalIndex)) seen.push(q.originalIndex);
+        });
+        setSeenQuestions(seen);
+        updateProgressUI();
+        showResults();
+    }
+
+    function showResults() {
+        document.getElementById('quiz-container').style.display = 'none';
+        document.getElementById('results-container').style.display = 'block';
+
+        let correct = 0, incorrect = 0, unanswered = 0;
+        const detailsWrapper = document.getElementById('detailed-results');
+        detailsWrapper.innerHTML = '';
+
+        currentBlock.forEach((q, index) => {
+            const userAnswerIdx = userAnswers[index];
+            const correctOptIdx = q.shuffledOptions.findIndex(o => o.isCorrect);
+            const isUnanswered = userAnswerIdx === undefined;
+            const isCorrect = !isUnanswered && userAnswerIdx === correctOptIdx;
+
+            if (isUnanswered) unanswered++;
+            else if (isCorrect) correct++;
+            else incorrect++;
+
+            let resultClass = isUnanswered ? 'unanswered' : (isCorrect ? 'correct' : 'incorrect');
+            let statusText = isUnanswered ? 'No contestada' : (isCorrect ? 'Correcta' : 'Errónea');
+
+            const correctTextObj = q.shuffledOptions.find(o => o.isCorrect).text;
+            let query = `Explica por qué la respuesta a "${q.q}" es "${correctTextObj}" y por qué las demás opciones son incorrectas, basándote en la teoría técnica de la materia.`;
+            const perplexityUrl = "https://www.perplexity.ai/search?q=" + encodeURIComponent(query);
+
+            let detailHtml = `
+                <div class="result-item ${resultClass}">
+                    <p><strong>${index + 1}. ${q.q}</strong></p>
+                    <p>Estado: <span class="${isCorrect ? 'correct-text' : (isUnanswered ? '' : 'error-text')}">${statusText}</span></p>
+            `;
+
+            if (!isUnanswered) detailHtml += `<p>Tu respuesta: <em>${q.shuffledOptions[userAnswerIdx].text}</em></p>`;
+            if (!isCorrect) detailHtml += `<p class="correct-text">Respuesta correcta: ${correctTextObj}</p>`;
+
+            detailHtml += `<a href="${perplexityUrl}" target="_blank" class="btn btn-perplexity">Consultar dudas en Perplexity ↗</a></div>`;
+            detailsWrapper.innerHTML += detailHtml;
+        });
+
+        document.getElementById('res-correct').innerText = correct;
+        document.getElementById('res-incorrect').innerText = incorrect;
+        document.getElementById('res-unanswered').innerText = unanswered;
+        window.scrollTo(0, 0);
+    }
+
+    function returnToStart() {
+        document.getElementById('results-container').style.display = 'none';
+        document.getElementById('start-container').style.display = 'block';
+    }
+
+    function returnToSubjects() {
+        document.getElementById('start-container').style.display = 'none';
+        document.getElementById('results-container').style.display = 'none';
+        document.getElementById('quiz-container').style.display = 'none';
+        document.getElementById('subject-container').style.display = 'block';
+        db = []; 
+    }
+
+    const themeBtn = document.getElementById('theme-btn');
+    themeBtn.addEventListener('click', () => {
+        const body = document.body;
+        if (body.getAttribute('data-theme') === 'dark') {
+            body.removeAttribute('data-theme');
+            themeBtn.innerText = 'Modo Oscuro';
+        } else {
+            body.setAttribute('data-theme', 'dark');
+            themeBtn.innerText = 'Modo Claro';
+        }
+    });
+</script>
+</body>
+</html>
