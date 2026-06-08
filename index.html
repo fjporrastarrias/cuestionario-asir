@@ -6,95 +6,43 @@
     <title>Plataforma de Tests: Exámenes Junio</title>
     <style>
         :root {
-            --bg-color: #f4f7f6;
-            --text-color: #333;
-            --card-bg: #fff;
-            --primary: #2c3e50;
-            --accent: #3498db;
-            --success: #27ae60;
-            --error: #e74c3c;
-            --border: #ddd;
+            --bg-color: #f4f7f6; --text-color: #333; --card-bg: #fff;
+            --primary: #2c3e50; --accent: #3498db; --success: #27ae60;
+            --error: #e74c3c; --border: #ddd;
         }
         [data-theme="dark"] {
-            --bg-color: #1a1a2e;
-            --text-color: #e6e6e6;
-            --card-bg: #16213e;
-            --primary: #e94560;
-            --accent: #0f3460;
-            --success: #2ecc71;
-            --error: #ff4757;
-            --border: #2c3e50;
+            --bg-color: #1a1a2e; --text-color: #e6e6e6; --card-bg: #16213e;
+            --primary: #e94560; --accent: #0f3460; --success: #2ecc71;
+            --error: #ff4757; --border: #2c3e50;
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            transition: all 0.3s ease;
-        }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 20px; transition: all 0.3s ease; }
         .container { max-width: 800px; margin: 0 auto; }
-        header {
-            display: flex; justify-content: space-between; align-items: center;
-            margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--border);
-        }
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--border); }
         h1, h2, h3 { color: var(--primary); margin: 0; }
-        .theme-toggle {
-            background: var(--card-bg); color: var(--text-color);
-            border: 1px solid var(--border); padding: 8px 15px; border-radius: 20px;
-            cursor: pointer; font-weight: bold;
-        }
-        .info-panel {
-            background: var(--card-bg); padding: 25px; border-radius: 8px;
-            margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;
-        }
-        select {
-            width: 100%; padding: 12px; font-size: 1.1em; margin: 15px 0;
-            border-radius: 5px; border: 1px solid var(--border);
-            background: var(--bg-color); color: var(--text-color);
-        }
-        .question-card {
-            background: var(--card-bg); padding: 20px; border-radius: 8px;
-            margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
+        .theme-toggle { background: var(--card-bg); color: var(--text-color); border: 1px solid var(--border); padding: 8px 15px; border-radius: 20px; cursor: pointer; font-weight: bold; }
+        .info-panel { background: var(--card-bg); padding: 25px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        select { width: 100%; padding: 12px; font-size: 1.1em; margin: 15px 0; border-radius: 5px; border: 1px solid var(--border); background: var(--bg-color); color: var(--text-color); }
+        .question-card { background: var(--card-bg); padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .question-text { font-size: 1.1em; font-weight: bold; margin-bottom: 15px; }
         .options { display: flex; flex-direction: column; gap: 10px; }
-        .option-label {
-            display: flex; align-items: center; padding: 12px; border: 1px solid var(--border);
-            border-radius: 5px; cursor: pointer; transition: background 0.2s;
-        }
+        .option-label { display: flex; align-items: center; padding: 12px; border: 1px solid var(--border); border-radius: 5px; cursor: pointer; transition: background 0.2s; }
         .option-label:hover { background: var(--bg-color); }
         input[type="radio"] { margin-right: 10px; }
-        .btn {
-            background: var(--accent); color: white; border: none; padding: 12px 25px;
-            font-size: 1.1em; border-radius: 5px; cursor: pointer; display: block;
-            width: 100%; margin-top: 20px; text-align: center; text-decoration: none;
-        }
+        .btn { background: var(--accent); color: white; border: none; padding: 12px 25px; font-size: 1.1em; border-radius: 5px; cursor: pointer; display: block; width: 100%; margin-top: 20px; text-align: center; text-decoration: none; }
         .btn:hover { opacity: 0.9; }
         .btn-secondary { background: #7f8c8d; }
-        .btn-perplexity {
-            background: #202327; font-size: 0.9em; padding: 8px 15px;
-            margin-top: 10px; display: inline-block; width: auto;
-        }
-        .results-summary {
-            display: flex; justify-content: space-around; background: var(--card-bg);
-            padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
+        .btn-perplexity { background: #202327; font-size: 0.9em; padding: 8px 15px; margin-top: 10px; display: inline-block; width: auto; }
+        .results-summary { display: flex; justify-content: space-around; background: var(--card-bg); padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .stat { text-align: center; font-size: 1.2em; font-weight: bold; }
         .stat span { display: block; font-size: 2em; }
         .stat.correct span { color: var(--success); }
         .stat.incorrect span { color: var(--error); }
         .stat.unanswered span { color: gray; }
-        .result-item {
-            background: var(--card-bg); padding: 15px; border-radius: 8px;
-            margin-bottom: 15px; border-left: 5px solid gray;
-        }
+        .result-item { background: var(--card-bg); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 5px solid gray; }
         .result-item.correct { border-left-color: var(--success); }
         .result-item.incorrect { border-left-color: var(--error); }
         .correct-text { color: var(--success); font-weight: bold; }
         .error-text { color: var(--error); font-weight: bold; }
-        
         #start-container, #quiz-container, #results-container { display: none; }
     </style>
 </head>
@@ -106,7 +54,12 @@
         <button class="theme-toggle" id="theme-btn">Modo Oscuro</button>
     </header>
 
-    <div id="subject-container" class="info-panel" style="display: block;">
+    <div id="loading-container" class="info-panel" style="display: block;">
+        <h3>Conectando con la base de datos...</h3>
+        <p>Cargando el catálogo de asignaturas disponibles.</p>
+    </div>
+
+    <div id="subject-container" class="info-panel" style="display: none;">
         <h3>Selecciona una Asignatura</h3>
         <p>Elige la materia que deseas repasar.</p>
         <select id="subject-select"></select>
@@ -135,17 +88,12 @@
         </div>
         <div id="detailed-results"></div>
         <button class="btn" onclick="returnToStart()">Hacer otro bloque de esta materia</button>
-        <button class="btn btn-secondary" onclick="returnToSubjects()">Volver a Selección</button>
+        <button class="btn btn-secondary" onclick="returnToSubjects()">Volver al Catálogo Central</button>
     </div>
 </div>
 
 <script>
-    // Catálogo apuntando a los archivos JSON
-    const subjectCatalog = [
-        { id: 'invernadero', name: 'Transformación Digital - Invernadero', file: 'json/invernadero.json' },
-        { id: 'redes', name: 'Redes Locales (Ejemplo)', file: 'json/redes.json' }
-    ];
-
+    let subjectCatalog = [];
     let db = [];
     let currentSubjectId = '';
     let currentSubjectName = '';
@@ -153,17 +101,34 @@
     let userAnswers = {};
     const QUESTIONS_PER_BLOCK = 20;
 
-    window.onload = () => {
-        const select = document.getElementById('subject-select');
-        subjectCatalog.forEach(subj => {
-            let option = document.createElement('option');
-            option.value = subj.id;
-            option.textContent = subj.name;
-            select.appendChild(option);
-        });
+    // AL ARRANCAR: Leer el fichero maestro materias.json
+    window.onload = async () => {
+        try {
+            // Buscamos el catálogo que creaste
+            const response = await fetch('json/materias.json');
+            if (!response.ok) throw new Error("No se pudo encontrar 'materias.json'. Asegúrate de que existe en la carpeta 'json'.");
+            
+            subjectCatalog = await response.json();
+            
+            // Construimos el menú desplegable
+            const select = document.getElementById('subject-select');
+            subjectCatalog.forEach(subj => {
+                let option = document.createElement('option');
+                option.value = subj.id;
+                option.textContent = subj.name;
+                select.appendChild(option);
+            });
+
+            // Ocultamos el mensaje de carga y mostramos el menú
+            document.getElementById('loading-container').style.display = 'none';
+            document.getElementById('subject-container').style.display = 'block';
+
+        } catch (error) {
+            document.getElementById('loading-container').innerHTML = `<h3 style="color:var(--error);">Error de Conexión</h3><p>${error.message}</p>`;
+        }
     };
 
-    // Uso de fetch() para obtener el JSON limpiamente desde el servidor
+    // AL PULSAR CARGAR MATERIA: Lee el fichero específico
     async function loadSubject() {
         const select = document.getElementById('subject-select');
         currentSubjectId = select.value;
@@ -172,7 +137,7 @@
 
         try {
             const response = await fetch(selectedSubject.file);
-            if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
+            if (!response.ok) throw new Error(`No se pudo cargar el archivo: ${selectedSubject.file}`);
             
             db = await response.json();
             
@@ -182,18 +147,12 @@
             
             updateProgressUI();
         } catch (error) {
-            alert("Error al cargar los datos: " + error.message);
+            alert("Error: " + error.message);
         }
     }
 
-    function getSeenQuestions() {
-        return JSON.parse(localStorage.getItem(`seenQuestions_${currentSubjectId}`)) || [];
-    }
-
-    function setSeenQuestions(seen) {
-        localStorage.setItem(`seenQuestions_${currentSubjectId}`, JSON.stringify(seen));
-    }
-
+    function getSeenQuestions() { return JSON.parse(localStorage.getItem(`seenQuestions_${currentSubjectId}`)) || []; }
+    function setSeenQuestions(seen) { localStorage.setItem(`seenQuestions_${currentSubjectId}`, JSON.stringify(seen)); }
     function updateProgressUI() {
         const seen = getSeenQuestions();
         document.getElementById('progress-text').innerText = `${seen.length}/${db.length}`;
@@ -222,7 +181,6 @@
                                    .filter(q => !seen.includes(q.originalIndex));
         
         availableQuestions.sort(() => Math.random() - 0.5);
-
         currentBlock = availableQuestions.slice(0, Math.min(QUESTIONS_PER_BLOCK, availableQuestions.length));
         
         currentBlock.forEach(q => {
@@ -238,12 +196,10 @@
     function renderQuestions() {
         const wrapper = document.getElementById('questions-wrapper');
         wrapper.innerHTML = '';
-
         currentBlock.forEach((q, index) => {
             let html = `<div class="question-card">
                             <div class="question-text">${index + 1}. ${q.q}</div>
                             <div class="options">`;
-            
             q.shuffledOptions.forEach((opt, optIndex) => {
                 html += `<label class="option-label">
                             <input type="radio" name="q${index}" value="${optIndex}" onchange="saveAnswer(${index}, ${optIndex})">
@@ -255,15 +211,12 @@
         });
     }
 
-    function saveAnswer(qIndex, optIndex) {
-        userAnswers[qIndex] = optIndex;
-    }
+    function saveAnswer(qIndex, optIndex) { userAnswers[qIndex] = optIndex; }
 
     function submitQuiz() {
         if(Object.keys(userAnswers).length < currentBlock.length) {
             if(!confirm("Tienes preguntas sin contestar. ¿Entregar de todos modos?")) return;
         }
-
         let seen = getSeenQuestions();
         currentBlock.forEach(q => {
             if(!seen.includes(q.originalIndex)) seen.push(q.originalIndex);
@@ -287,9 +240,7 @@
             const isUnanswered = userAnswerIdx === undefined;
             const isCorrect = !isUnanswered && userAnswerIdx === correctOptIdx;
 
-            if (isUnanswered) unanswered++;
-            else if (isCorrect) correct++;
-            else incorrect++;
+            if (isUnanswered) unanswered++; else if (isCorrect) correct++; else incorrect++;
 
             let resultClass = isUnanswered ? 'unanswered' : (isCorrect ? 'correct' : 'incorrect');
             let statusText = isUnanswered ? 'No contestada' : (isCorrect ? 'Correcta' : 'Errónea');
