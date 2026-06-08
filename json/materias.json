@@ -1,17 +1,17 @@
 [
     {
         "id": "dig-01",
-        "name": "DIG-01",
+        "name": "CUESTIONARIO DIG-01",
         "file": "json/dig-01.json"
     },
     {
         "id": "dig-02",
-        "name": "DIG-02",
+        "name": "CUESTIONARIO DIG-02",
         "file": "json/dig-02.json"
     },
     {
         "id": "dig-03",
-        "name": "DIG-03",
+        "name": "CUESTIONARIO DIG-03",
         "file": "json/dig-03.json"
     },
     {
