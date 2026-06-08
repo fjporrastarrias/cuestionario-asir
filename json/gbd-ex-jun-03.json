@@ -1,0 +1,195 @@
+Voy a leer nuevamente los documentos para asegurar que las nuevas 20 preguntas sean completamente diferentes a las anteriores y basadas estrictamente en el contenido teórico.
+Perfecto. Ahora procederé a generar una tercera batería de 20 preguntas completamente nuevas, basadas en contenido diferente de los documentos y sin repetir ninguna de las anteriores.
+
+[
+{
+"q": "¿Cuál es la función de la cláusula USING en comparación con ON en un JOIN?",
+"o": [
+"USING indica la columna común entre tablas por su nombre, mientras que ON especifica la condición de igualdad de forma explícita",
+"ON es más rápido que USING en cualquier circunstancia",
+"USING requiere alias de tabla, ON no",
+"Ambos tienen idéntico comportamiento y sintaxis"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia entre COUNT(DISTINCT columna) y COUNT(columna)?",
+"o": [
+"COUNT(DISTINCT columna) cuenta solo valores únicos eliminando repeticiones, COUNT(columna) cuenta todas las filas con valores no-NULL",
+"COUNT(columna) es más rápido porque no valida unicidad",
+"COUNT(DISTINCT columna) solo funciona con números",
+"Ambas dan exactamente el mismo resultado en cualquier tabla"
+],
+"a": 0
+},
+{
+"q": "¿Qué devuelve SELECT ALL cdconcur FROM participa en comparación con SELECT cdconcur FROM participa?",
+"o": [
+"Ambas devuelven exactamente el mismo resultado; ALL es implícito y muestra todos los registros incluyendo duplicados",
+"SELECT ALL filtra duplicados, SELECT sin ALL los mantiene",
+"ALL solo funciona con valores numéricos",
+"SELECT sin ALL es sintaxis errónea"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función de DATE_FORMAT(MAX(fecha_inscri), '%d/%m/%Y')?",
+"o": [
+"Extrae la fecha más reciente y la formatea en formato día/mes/año con barras",
+"Convierte todas las fechas a UNIX timestamp",
+"Calcula el número de días entre dos fechas",
+"Devuelve la fecha como número entero sin formato"
+],
+"a": 0
+},
+{
+"q": "¿Qué sucede cuando usas CROSS JOIN entre dos tablas?",
+"o": [
+"Genera el producto cartesiano, combinando cada fila de la primera tabla con cada fila de la segunda",
+"Devuelve solo las filas que coinciden según una clave extranjera",
+"Elimina duplicados automáticamente",
+"Solo devuelve filas de la primera tabla ignorando la segunda"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia entre NATURAL JOIN y JOIN USING?",
+"o": [
+"NATURAL JOIN empareja filas automáticamente por columnas con igual nombre, JOIN USING requiere especificar explícitamente la columna común",
+"NATURAL JOIN es más rápido siempre",
+"JOIN USING solo funciona con tablas de la misma base de datos",
+"Ambos tienen sintaxis idéntica"
+],
+"a": 0
+},
+{
+"q": "¿Qué devuelve SUM(DISTINCT puntos) en una tabla con valores repetidos?",
+"o": [
+"Suma solo los valores distintos de la columna puntos, eliminando duplicados antes de calcular",
+"Suma todos los valores incluyendo las repeticiones",
+"Devuelve un error porque SUM no soporta DISTINCT",
+"Devuelve la cantidad de valores distintos, no su suma"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia entre MIN(columna_fecha) y MAX(columna_fecha)?",
+"o": [
+"MIN devuelve la fecha más antigua, MAX devuelve la más reciente, comparando cronológicamente",
+"MIN devuelve el menor valor numérico, MAX devuelve el mayor",
+"MIN solo funciona con números, MAX solo con fechas",
+"Ambas devuelven exactamente el mismo resultado"
+],
+"a": 0
+},
+{
+"q": "¿Qué diferencia existe entre INSERT INTO tabla SELECT y INSERT INTO tabla VALUES?",
+"o": [
+"INSERT INTO tabla SELECT copia datos desde otra tabla permitiendo transformaciones, VALUES inserta un único registro con valores fijos",
+"INSERT INTO tabla VALUES es más lento siempre",
+"INSERT INTO tabla SELECT solo funciona con la misma tabla",
+"Ambas tienen idéntico comportamiento"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función de AUTOCOMMIT = 0 antes de un LOCK TABLE?",
+"o": [
+"Desactiva la confirmación automática de cambios, permitiendo control manual con COMMIT o ROLLBACK después del bloqueo",
+"Activa bloques de lectura automáticamente",
+"Elimina todos los bloqueos de la sesión actual",
+"Es opcional y no afecta el funcionamiento del bloqueo"
+],
+"a": 0
+},
+{
+"q": "¿Qué sucede cuando una tabla derivada no tiene alias en FROM?",
+"o": [
+"MySQL lanza un error obligando a asignar un alias con AS a la subconsulta",
+"La tabla derivada funciona normalmente sin necesidad de alias",
+"Se utiliza el nombre de la tabla original como alias automáticamente",
+"Se crea un alias aleatorio internamente"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia entre DELETE con WHERE y DELETE sin WHERE?",
+"o": [
+"DELETE con WHERE elimina solo filas que cumplen la condición, DELETE sin WHERE elimina todas las filas de la tabla",
+"DELETE sin WHERE es más seguro porque pide confirmación",
+"DELETE con WHERE solo funciona con claves primarias",
+"Ambas tienen idéntico efecto"
+],
+"a": 0
+},
+{
+"q": "¿Qué función cumple INTERSECT en una consulta de múltiples SELECT?",
+"o": [
+"Devuelve únicamente las filas que aparecen en ambos conjuntos de resultados",
+"Devuelve todas las filas de ambos SELECT sin eliminar duplicados",
+"Combina todos los resultados eliminando solo los exactamente duplicados",
+"Devuelve las filas que están en el primer SELECT pero no en el segundo"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función de RIGHT JOIN en comparación con LEFT JOIN?",
+"o": [
+"RIGHT JOIN conserva todas las filas de la tabla derecha incluso sin coincidencia, LEFT JOIN conserva todas de la tabla izquierda",
+"RIGHT JOIN es más rápido que LEFT JOIN",
+"RIGHT JOIN elimina completamente la tabla derecha si no hay coincidencias",
+"Ambas tienen idéntico comportamiento"
+],
+"a": 0
+},
+{
+"q": "¿Qué devuelve una subconsulta escalar colocada en el SELECT de otra consulta?",
+"o": [
+"Calcula un valor por cada fila devolviendo columnas adicionales derivadas de subconsultas relacionadas",
+"Devuelve un error porque las subconsultas no se permiten en SELECT",
+"Solo devuelve un valor único para toda la consulta",
+"Devuelve una tabla temporal que debe filtrase con WHERE"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia entre MINUS y NOT IN en términos de resultado?",
+"o": [
+"MINUS devuelve filas del primer conjunto que no existen en el segundo, NOT IN elimina filas cuya clave no aparece en una lista",
+"MINUS es más rápido que NOT IN",
+"NOT IN solo funciona con valores numéricos",
+"Ambos tienen idéntico comportamiento"
+],
+"a": 0
+},
+{
+"q": "¿Qué sucede cuando HAVING contiene una subconsulta que devuelve NULL?",
+"o": [
+"Los grupos se comparan con NULL, y dependiendo del operador, pueden filtrarse o no según la lógica del operador de comparación",
+"Se genera un error obligando a especificar un valor predeterminado",
+"Se ignora la condición HAVING completamente",
+"Se devuelven todos los grupos sin filtrado"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función de SAVEPOINT en una transacción?",
+"o": [
+"Crea un punto de restauración intermedio para revertir solo hasta ese punto sin afectar cambios anteriores",
+"Confirma automáticamente todos los cambios desde el inicio de la transacción",
+"Elimina toda la transacción actual",
+"Es equivalente a COMMIT"
+],
+"a": 0
+},
+{
+"q": "¿Qué devuelve SELECT columna FROM tabla ORDER BY posición DESC?",
+"o": [
+"Ordena por la posición numérica de la columna en la lista SELECT de mayor a menor (descendente)",
+"Ordena alfabéticamente por el nombre de la columna",
+"Genera un error porque ORDER BY requiere el nombre de columna",
+"Ordena por la clave primaria descendente"
+],
+"a": 0
+}
+]

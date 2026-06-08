@@ -1,0 +1,202 @@
+[
+{
+"q": "¿Qué práctica de sostenibilidad se propone para minimizar el impacto medioambiental en el invernadero?",
+"o": [
+"Implementar prácticas para minimizar los residuos agrícolas y promover el reciclaje",
+"Eliminar totalmente la producción para reducir residuos",
+"Aumentar el uso de plásticos para proteger los cultivos",
+"Prohibir el uso de agua en los cultivos"
+],
+"a": 0
+},
+{
+"q": "¿Qué fuentes de energía renovable se sugieren integrar en el invernadero para reducir la huella de carbono?",
+"o": [
+"Paneles solares y sistemas de biomasa",
+"Motores de combustión interna",
+"Generadores diésel de alta potencia",
+"Electricidad proveniente exclusivamente de centrales de carbón"
+],
+"a": 0
+},
+{
+"q": "En el área de logística, ¿cuál es la ventaja de utilizar interfaces fáciles de usar (Interfaz Usuario-Máquina)?",
+"o": [
+"Permitir que el personal acceda y actualice el estado de los inventarios y entregas",
+"Eliminar la necesidad de personal de logística",
+"Automatizar la conducción de los camiones de reparto",
+"Sustituir por completo las rutas de transporte físico"
+],
+"a": 0
+},
+{
+"q": "¿Cómo se complementan las inspecciones de calidad manuales con la digitalización?",
+"o": [
+"Utilizando datos de sistemas de control de calidad para guiar y enfocar las inspecciones en áreas críticas",
+"Reemplazando totalmente el ojo humano por cámaras",
+"Eliminando las inspecciones manuales por ser redundantes",
+"Ignorando los resultados de los sistemas digitales durante las inspecciones"
+],
+"a": 0
+},
+{
+"q": "Respecto a las finanzas, ¿qué mejora la implementación de flujos de trabajo digitales?",
+"o": [
+"Automatizar y agilizar los procesos de aprobación manual",
+"Eliminar la supervisión humana en los pagos",
+"Reducir el presupuesto de inversión en tecnología",
+"Centralizar todas las decisiones en un solo empleado"
+],
+"a": 0
+},
+{
+"q": "¿Qué papel juega una base de datos centralizada en la gestión financiera del invernadero?",
+"o": [
+"Almacenar y acceder a documentos digitalizados para mejorar su gestión",
+"Generar automáticamente dinero para la empresa",
+"Eliminar la necesidad de contadores financieros",
+"Publicar los resultados financieros en redes sociales automáticamente"
+],
+"a": 0
+},
+{
+"q": "¿Qué herramientas se mencionan para el Marketing digital del invernadero?",
+"o": [
+"Campañas de publicidad, SEO y redes sociales",
+"Uso exclusivo de vallas publicitarias físicas",
+"Ventas telefónicas a puerta fría",
+"Reparto manual de panfletos en la comunidad"
+],
+"a": 0
+},
+{
+"q": "¿Cómo se logra el encaje entre las ventas presenciales y la digitalización?",
+"o": [
+"Capacitando a vendedores presenciales para usar herramientas digitales como el CRM",
+"Prohibiendo las ventas presenciales en favor del comercio electrónico",
+"Ignorando las ventas presenciales en la estrategia global",
+"Separando totalmente las bases de datos de ambos canales"
+],
+"a": 0
+},
+{
+"q": "¿Qué estrategia se propone para el soporte al cliente en caso de consultas complejas?",
+"o": [
+"Complementar los chatbots con la posibilidad de escalar a atención humana",
+"Limitar las consultas a un horario muy reducido sin humanos",
+"Obligar al cliente a usar únicamente la inteligencia artificial",
+"Desactivar el soporte técnico durante las horas punta"
+],
+"a": 0
+},
+{
+"q": "En cuanto a la Atención al Cliente, ¿qué se busca al asegurar que las interacciones se registren en el CRM?",
+"o": [
+"Tener una visión unificada del cliente",
+"Aumentar el número de llamadas spam recibidas",
+"Ocultar las quejas de los clientes",
+"Reducir el espacio de almacenamiento del servidor"
+],
+"a": 0
+},
+{
+"q": "¿Qué beneficio aportan las herramientas digitales en la gestión de recursos humanos?",
+"o": [
+"Realizar y registrar evaluaciones de desempeño de manera más eficiente",
+"Contratar automáticamente al primer candidato disponible",
+"Eliminar los derechos laborales de los trabajadores",
+"Reducir las horas de trabajo a cero minutos diarios"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función del mantenimiento manual en un entorno con automatización?",
+"o": [
+"Realizar el mantenimiento de equipos de producción, herramientas y supervisión física",
+"Ser una tarea totalmente innecesaria",
+"Evitar el uso de sensores en el invernadero",
+"Reemplazar el control ambiental por supervisión humana directa"
+],
+"a": 0
+},
+{
+"q": "¿Qué tipo de datos se almacenan generalmente en bases de datos relacionales según el documento?",
+"o": [
+"Datos estructurados como inventarios, transacciones y registros de calidad",
+"Registros de sonido e imágenes de video crudas",
+"Datos aleatorios sin orden ni estructura",
+"Únicamente mensajes de correos electrónicos internos"
+],
+"a": 0
+},
+{
+"q": "¿Qué objetivo estratégico busca la 'Diversificación de productos'?",
+"o": [
+"Incluir nuevas variedades de cultivos y productos de valor añadido",
+"Reducir la variedad de cultivos para simplificar la gestión",
+"Vender solo un tipo de producto en todo el año",
+"Eliminar todos los productos existentes y empezar de cero"
+],
+"a": 0
+},
+{
+"q": "¿Qué implica la participación en programas de colaboración público-privada?",
+"o": [
+"Acceder a financiación y recursos adicionales",
+"Privatizar toda la infraestructura del invernadero",
+"Ignorar las regulaciones gubernamentales vigentes",
+"Colaborar únicamente con empresas competidoras"
+],
+"a": 0
+},
+{
+"q": "¿Para qué se utiliza el software de gestión (ERP) en la recopilación de datos?",
+"o": [
+"Información de inventarios, ventas, logística y finanzas",
+"Captura exclusiva de imágenes térmicas",
+"Generación de publicidad para el consumidor final",
+"Análisis climático a nivel global"
+],
+"a": 0
+},
+{
+"q": "¿Qué es un Análisis Descriptivo en el contexto de BI?",
+"o": [
+"Uso de dashboards e informes para visualizar el estado actual de operaciones y cultivos",
+"Predicción del futuro a 10 años sin datos",
+"Creación de arte generativo basado en los cultivos",
+"Eliminación de todos los datos históricos del sistema"
+],
+"a": 0
+},
+{
+"q": "¿Qué se busca obtener mediante las certificaciones de calidad y seguridad alimentaria?",
+"o": [
+"Reconocimiento a nivel internacional",
+"Una reducción en los impuestos agrícolas locales",
+"La exención de realizar inspecciones de higiene",
+"Permiso para cultivar productos prohibidos"
+],
+"a": 0
+},
+{
+"q": "¿Qué aportan los programas de formación y educación en agricultura sostenible?",
+"o": [
+"Ofrecer programas para empleados y comunidades sobre tecnologías avanzadas",
+"Reducir el salario de los empleados formados",
+"Aumentar el uso de pesticidas prohibidos",
+"Evitar que la comunidad aprenda sobre el negocio"
+],
+"a": 0
+},
+{
+"q": "¿Cómo contribuyen los sensores IoT a la recopilación de datos?",
+"o": [
+"Monitorizan variables ambientales como temperatura, humedad, luz y CO2",
+"Calculan automáticamente las nóminas de los empleados",
+"Reducen el costo de la energía eléctrica a cero",
+"Sustituyen la necesidad de riego por agua"
+],
+"a": 0
+}
+]

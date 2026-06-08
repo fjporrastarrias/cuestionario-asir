@@ -1,0 +1,202 @@
+[
+{
+"q": "¿Qué vulnerabilidad específica es aprovechada por un exploit según el texto?",
+"o": [
+"Un sistema operativo obsoleto o no actualizado",
+"La falta de conexión a internet en el invernadero",
+"El uso excesivo de inteligencia artificial",
+"La falta de paneles solares"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función principal del 'Fichero Maestro' (materias.json) en la arquitectura del sistema?",
+"o": [
+"Actuar como enrutador dinámico para alimentar el selector de la interfaz",
+"Almacenar las preguntas masivas de cada materia",
+"Gestionar la seguridad de la red Wi-Fi del invernadero",
+"Realizar copias de seguridad de las bases de datos de clientes"
+],
+"a": 0
+},
+{
+"q": "¿Qué error sintáctico causa el 'Trailing Comma Error' en el analizador JSON del navegador?",
+"o": [
+"Incluir una coma en el último elemento antes del cierre del corchete",
+"No usar corchetes para abrir el fichero",
+"Usar llaves para definir cada ítem",
+"No separar los bloques con comas"
+],
+"a": 0
+},
+{
+"q": "¿Cómo se propaga el software malicioso mediante correos de phishing según la descripción?",
+"o": [
+"Por el clic de un empleado en un enlace del mensaje",
+"Por el uso de contraseñas complejas",
+"Por la actualización automática del sistema operativo",
+"Por la encriptación de los datos de los sensores"
+],
+"a": 0
+},
+{
+"q": "¿Por qué se utiliza la clave 'seenQuestions_' concatenada con el 'currentSubjectId' en localStorage?",
+"o": [
+"Para evitar la colisión de métricas entre diferentes asignaturas",
+"Para aumentar la velocidad de carga del archivo index.html",
+"Para encriptar las respuestas correctas de los exámenes",
+"Para permitir el acceso multiusuario simultáneo"
+],
+"a": 0
+},
+{
+"q": "¿Por qué se omite el uso de 'display: flex' o 'display: grid' en la capa de presentación?",
+"o": [
+"Para garantizar compatibilidad con motores de renderizado embebidos (WebView)",
+"Porque son propiedades obsoletas que no funcionan en ningún navegador",
+"Porque aumentan el peso del archivo más allá de 25 KB",
+"Porque impiden el uso de variables CSS nativas"
+],
+"a": 0
+},
+{
+"q": "¿Por qué falla el acceso a GitHub Pages si el archivo principal se denomina 'Index.html'?",
+"o": [
+"Porque el entorno Linux de GitHub es sensible a mayúsculas (Case-Sensitive)",
+"Porque el navegador bloquea archivos con nombres largos",
+"Porque la extensión .html no es compatible con el protocolo HTTPS",
+"Porque el archivo debe estar en una carpeta cifrada"
+],
+"a": 0
+},
+{
+"q": "¿Qué problema soluciona el uso de llamadas asíncronas vía HTTPS en lugar del protocolo file:///?",
+"o": [
+"Las restricciones de seguridad de los navegadores para ejecutar lecturas dinámicas",
+"La latencia excesiva en las conexiones de fibra óptica",
+"La imposibilidad de renderizar HTML5 en dispositivos móviles",
+"El bloqueo de cookies de terceros en el almacenamiento local"
+],
+"a": 0
+},
+{
+"q": "¿Qué estructura sintáctica es obligatoria para evitar el error 'Unexpected non-whitespace character'?",
+"o": [
+"Separar los ítems con comas y no usar bloques duplicados sin separador",
+"Usar siempre mayúsculas en las etiquetas de los objetos",
+"Colocar todas las preguntas en una sola línea de texto",
+"Cerrar cada bloque con un punto y coma"
+],
+"a": 0
+},
+{
+"q": "¿Qué técnica utiliza un intruso en un ataque de ingeniería social para obtener una contraseña?",
+"o": [
+"Llamar telefónicamente haciéndose pasar por soporte técnico",
+"Inyectar código malicioso en el hardware",
+"Interceptar ondas de radio del sensor IoT",
+"Hackear el servidor de la empresa mediante fuerza bruta"
+],
+"a": 0
+},
+{
+"q": "¿Qué permite la funcionalidad 'Añadir a la pantalla de inicio' en dispositivos Android?",
+"o": [
+"Forzar el comportamiento PWA y el uso offline del simulador",
+"Instalar automáticamente nuevas actualizaciones del sistema operativo",
+"Eliminar la necesidad de usar una conexión Wi-Fi para siempre",
+"Aumentar la memoria RAM disponible para el navegador"
+],
+"a": 0
+},
+{
+"q": "¿Qué propósito tiene el método 'encodeURIComponent' en la integración con Perplexity AI?",
+"o": [
+"Codificar en formato web una consulta estructurada con la pregunta y solución",
+"Encriptar los resultados para que el alumno no vea la respuesta",
+"Comprimir el archivo de preguntas para reducir su tamaño",
+"Traducir automáticamente el contenido a otros idiomas"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es el objetivo de utilizar el 'Prompt Maestro' para la generación de nuevos bancos de preguntas?",
+"o": [
+"Garantizar que la IA devuelva código JSON sintácticamente perfecto y compatible",
+"Reducir el consumo de datos móviles durante el estudio",
+"Aumentar la dificultad de los exámenes universitarios",
+"Crear un nuevo lenguaje de programación propietario"
+],
+"a": 0
+},
+{
+"q": "¿Qué componente de la logística se considera no digitalizado en el encaje de áreas?",
+"o": [
+"Coordinación manual de entrega con empresas de transporte",
+"Gestión de inventarios mediante software",
+"Optimización de rutas de transporte",
+"Uso de blockchain para trazabilidad"
+],
+"a": 0
+},
+{
+"q": "¿Qué medida de seguridad se recomienda para mitigar los riesgos de ataques en el invernadero?",
+"o": [
+"Autenticación multifactor",
+"Eliminar todos los sistemas conectados a la red",
+"Publicar las contraseñas en un documento compartido",
+"Desactivar los firewalls para mayor fluidez"
+],
+"a": 0
+},
+{
+"q": "¿Qué función cumple la propiedad 'box-sizing: border-box' en la interfaz?",
+"o": [
+"Garantizar que ningún elemento sobresalga de los límites físicos de la pantalla",
+"Cambiar el color de fondo del tema oscuro",
+"Aumentar el tamaño de la fuente para mejorar la legibilidad",
+"Centrar automáticamente todos los botones de la interfaz"
+],
+"a": 0
+},
+{
+"q": "¿Cómo evita el script la memoria posicional del alumno durante el simulacro?",
+"o": [
+"Permutando aleatoriamente las opciones de respuesta en memoria",
+"Limitando el número de preguntas a 20",
+"Bloqueando el acceso a la respuesta correcta hasta el final",
+"Cambiando el color de las opciones cada vez que se abre la app"
+],
+"a": 0
+},
+{
+"q": "¿Qué riesgo específico supone una brecha de seguridad para el área de I+D?",
+"o": [
+"Robo de propiedad intelectual",
+"Aumento de la temperatura ambiental",
+"Desabastecimiento de productos básicos",
+"Error en la facturación a proveedores"
+],
+"a": 0
+},
+{
+"q": "¿Qué evento dispara la carga del archivo materias.json?",
+"o": [
+"El evento window.onload",
+"La conexión manual del usuario a un servidor FTP",
+"La apertura de un nuevo año fiscal",
+"El apagado del dispositivo móvil"
+],
+"a": 0
+},
+{
+"q": "¿Qué impacto tiene un ataque de phishing dirigido a un empleado?",
+"o": [
+"El software malicioso empieza a propagarse por la red",
+"La pérdida de los datos de los clientes en la nube",
+"El cierre definitivo de la empresa por falta de fondos",
+"La interrupción física de la electricidad en el invernadero"
+],
+"a": 0
+}
+]

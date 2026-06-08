@@ -1,32 +1,202 @@
 [
-    {
-        "q": "¿Qué ventaja principal ofrece el uso de invernaderos según el texto?",
-        "o": [
-            "Permiten cultivar independientemente de las condiciones climáticas todo el año.",
-            "Reducen los impuestos agrícolas al ser estructuras cerradas.",
-            "Eliminan por completo la necesidad de regar los cultivos.",
-            "Permiten cultivar exclusivamente tomates en la región de Murcia."
-        ],
-        "a": 0
-    },
-    {
-        "q": "¿Qué tecnología se menciona para maximizar el uso eficiente del agua y nutrientes?",
-        "o": [
-            "Riego por goteo y fertirrigación.",
-            "Sistemas de aspersión de alto volumen.",
-            "Canales de inundación hidropónicos.",
-            "Riego manual con mangueras de presión."
-        ],
-        "a": 0
-    },
-    {
-        "q": "En el objetivo estratégico de 'Sostenibilidad', ¿qué fuentes de energía renovable se sugieren integrar?",
-        "o": [
-            "Paneles solares y sistemas de biomasa.",
-            "Turbinas eólicas y energía geotérmica.",
-            "Reactores nucleares a pequeña escala.",
-            "Generadores diésel de bajas emisiones."
-        ],
-        "a": 0
-    }
+{
+"q": "¿Qué objetivo estratégico implica el uso de tecnologías como el riego por goteo y la fertirrigación para maximizar el uso eficiente de recursos?",
+"o": [
+"Sostenibilidad",
+"Eficiencia operativa",
+"Expansión y crecimiento",
+"Calidad y seguridad alimentaria"
+],
+"a": 0
+},
+{
+"q": "¿Qué tecnología se menciona para asegurar la trazabilidad de los productos desde el invernadero hasta el consumidor final?",
+"o": [
+"Blockchain",
+"Big Data",
+"Machine Learning",
+"IoT"
+],
+"a": 0
+},
+{
+"q": "En la integración de áreas, ¿cómo se benefician las tareas manuales de supervisión mediante el uso de datos digitales?",
+"o": [
+"Los datos de sensores informan sobre cuándo y dónde se necesita mantenimiento",
+"Se eliminan los supervisores humanos",
+"Se automatizan todas las tareas de mantenimiento",
+"Se reemplazan las herramientas manuales por robots"
+],
+"a": 0
+},
+{
+"q": "¿Qué constituye un ejemplo de ingeniería social como brecha de seguridad?",
+"o": [
+"Un intruso que se hace pasar por informático para solicitar una contraseña",
+"Un correo electrónico de phishing",
+"El uso de contraseñas débiles como 'contraseña'",
+"El uso de un sistema operativo obsoleto"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es el propósito principal del uso de Edge Computing en el invernadero?",
+"o": [
+"Procesar datos cerca de la fuente para reducir la latencia y tomar decisiones en tiempo real",
+"Almacenar datos masivos en la nube",
+"Gestionar las finanzas de la empresa",
+"Reemplazar el servidor central por completo"
+],
+"a": 0
+},
+{
+"q": "¿Qué tipo de análisis de datos utiliza herramientas de optimización y simulación para recomendar acciones específicas?",
+"o": [
+"Análisis prescriptivo",
+"Análisis descriptivo",
+"Análisis predictivo",
+"Análisis exploratorio"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es un riesgo principal de una brecha de seguridad en los sistemas de automatización (sensores IoT)?",
+"o": [
+"La alteración de las condiciones de cultivo afectando la salud de las plantas",
+"El robo de cuentas bancarias de los empleados",
+"La pérdida de correos electrónicos de marketing",
+"La exposición de datos de facturas antiguas"
+],
+"a": 0
+},
+{
+"q": "¿Qué función cumple el Middleware en la integración de datos?",
+"o": [
+"Software intermedio que facilita la comunicación entre aplicaciones y sistemas",
+"Base de datos para almacenamiento masivo",
+"Plataforma de comercio electrónico",
+"Herramienta de visualización de Business Intelligence"
+],
+"a": 0
+},
+{
+"q": "¿Qué aporta la digitalización en el área de Marketing y Ventas además de la gestión de relaciones con clientes (CRM)?",
+"o": [
+"Medir y ajustar campañas de marketing digital en tiempo real",
+"Reemplazar a todos los vendedores presenciales",
+"Aumentar los impuestos agrícolas",
+"Eliminar el uso de publicidad tradicional"
+],
+"a": 0
+},
+{
+"q": "En la gestión financiera, ¿qué impacto tiene la exposición de información financiera sensible?",
+"o": [
+"Daño a la reputación de la empresa",
+"Mejora de la competitividad de mercado",
+"Aumento inmediato de las ventas",
+"Optimización de costes operativos"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es una característica del almacenamiento de datos en bases de datos NoSQL según el documento?",
+"o": [
+"Almacenan datos no estructurados y semiestructurados como registros de sensores",
+"Son utilizadas exclusivamente para datos financieros",
+"Gestionan datos relacionales bajo esquemas estrictos",
+"Se emplean para la gestión de inventarios exclusivamente"
+],
+"a": 0
+},
+{
+"q": "¿Qué implica el objetivo estratégico de 'Resiliencia de la cadena de suministro'?",
+"o": [
+"Asegurar la capacidad de enfrentar posibles interrupciones",
+"Reducir los costes del transporte externo",
+"Ampliar el mercado a nivel internacional",
+"Automatizar el sistema de riego por goteo"
+],
+"a": 0
+},
+{
+"q": "¿Qué técnica se utiliza para proteger la privacidad de los datos en el invernadero?",
+"o": [
+"Encriptación",
+"Acceso abierto a todo el personal",
+"Eliminación de las copias de seguridad",
+"Uso de contraseñas compartidas"
+],
+"a": 0
+},
+{
+"q": "En el contexto de Recursos Humanos, ¿qué mejora la digitalización de los procesos de contratación?",
+"o": [
+"Facilita el reclutamiento y la selección de personal",
+"Elimina la necesidad de personal en el invernadero",
+"Aumenta el salario de todos los empleados",
+"Automatiza todas las tareas de campo"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia principal entre los ataques de phishing y los de ingeniería social según el texto?",
+"o": [
+"El phishing usa correos falsos, mientras que la ingeniería social suele involucrar interacción directa",
+"El phishing es una técnica de automatización robótica",
+"La ingeniería social es una vulnerabilidad de hardware",
+"Ambos términos se refieren exactamente a la misma práctica"
+],
+"a": 0
+},
+{
+"q": "¿Qué permite el Análisis Predictivo en la gestión de plagas y enfermedades?",
+"o": [
+"Anticipar eventos futuros y recomendar tratamientos basados en datos históricos",
+"Eliminar las plagas automáticamente sin intervención",
+"Ignorar el monitoreo manual de los cultivos",
+"Reducir el coste de los fertilizantes instantáneamente"
+],
+"a": 0
+},
+{
+"q": "¿Qué rol juegan las APIs en la infraestructura de datos del invernadero?",
+"o": [
+"Conectar diferentes sistemas y permitir el flujo de datos entre ellos",
+"Almacenar los datos históricos de ventas",
+"Analizar los datos de sensores",
+"Visualizar los resultados de los cultivos"
+],
+"a": 0
+},
+{
+"q": "¿Cómo se maneja la seguridad en el acceso a los datos de acuerdo con el manual?",
+"o": [
+"Implementación de políticas de acceso y autenticación multifactor",
+"Permitir acceso libre para todo el personal",
+"Uso exclusivo de contraseñas sencillas sin políticas adicionales",
+"Ausencia total de controles de seguridad en las bases de datos"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es un impacto negativo de la falsificación de resultados en investigación y desarrollo (I+D)?",
+"o": [
+"Decisioness incorrectas y pérdida de inversión en desarrollos no viables",
+"Mejora de la productividad del invernadero",
+"Ahorro de tiempo en el laboratorio de investigación",
+"Aumento significativo de la ventaja competitiva"
+],
+"a": 0
+},
+{
+"q": "¿Qué ventaja ofrecen los dashboards en tiempo real para la monitorización?",
+"o": [
+"Visualizar el estado de los sistemas y cultivos al momento",
+"Archivar datos antiguos automáticamente",
+"Calcular los impuestos mensuales de la empresa",
+"Gestionar las nóminas de los trabajadores"
+],
+"a": 0
+}
 ]

@@ -1,0 +1,202 @@
+[
+{
+"q": "¿Cuál es la diferencia entre SUM(puntos) y SUM(DISTINCT puntos) en una consulta agregada?",
+"o": [
+"SUM(puntos) suma todos los valores incluyendo duplicados, mientras que SUM(DISTINCT puntos) suma solo valores únicos",
+"SUM(DISTINCT puntos) es más rápido en cualquier circunstancia",
+"SUM(DISTINCT puntos) requiere la cláusula GROUP BY de forma obligatoria",
+"Ambas funciones devuelven idéntico resultado en tablas sin duplicados"
+],
+"a": 0
+},
+{
+"q": "¿Qué sucede cuando ejecutas SELECT * FROM tabla LIMIT 5,10 en comparación con LIMIT 5?",
+"o": [
+"LIMIT 5,10 salta las primeras 5 filas y devuelve las 10 siguientes, mientras que LIMIT 5 devuelve solo las primeras 5",
+"LIMIT 5,10 devuelve 15 filas en total, LIMIT 5 devuelve 5 filas",
+"LIMIT 5,10 aplica un desplazamiento de 10 y luego toma 5 filas",
+"LIMIT 5 es una sintaxis errónea y debe usarse obligatoriamente con dos parámetros"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función del operador LIKE '%\\\\%' en MySQL?",
+"o": [
+"Busca cadenas que contienen un signo de porcentaje literal escapado mediante barra invertida",
+"Busca cualquier cadena de caracteres sin restricción",
+"Busca cadenas que terminan con un porcentaje",
+"Es equivalente a usar LIKE '%%%' sin necesidad de escape"
+],
+"a": 0
+},
+{
+"q": "¿Qué devuelve ROUND(10/3,2) exactamente?",
+"o": [
+"3.33, redondeando el resultado de la división a 2 decimales",
+"3.34, redondeando al alza por defecto",
+"3, ignorando completamente los decimales",
+"10, devolviendo solo la parte entera sin decimales"
+],
+"a": 0
+},
+{
+"q": "¿Qué diferencia existe entre NOT BETWEEN y BETWEEN en cuanto a inclusión de extremos?",
+"o": [
+"BETWEEN incluye los extremos del rango, NOT BETWEEN excluye todas las filas dentro del rango incluyendo sus extremos",
+"BETWEEN excluye los extremos, NOT BETWEEN incluye cualquier valor fuera del rango",
+"Ambas tienen el mismo comportamiento respecto a los extremos",
+"NOT BETWEEN solo devuelve valores NULL cuando no hay coincidencias"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia entre ORDER BY 1 DESC y ORDER BY columna DESC?",
+"o": [
+"ORDER BY 1 DESC ordena por la primera columna del SELECT en orden descendente, ORDER BY columna DESC ordena por el nombre de la columna",
+"ORDER BY 1 DESC es sintaxis errónea en MySQL",
+"ORDER BY columna DESC ordena alfabéticamente, ORDER BY 1 DESC ordena numéricamente",
+"Ambas devuelven exactamente el mismo resultado independientemente del contexto"
+],
+"a": 0
+},
+{
+"q": "¿Qué devuelve la subconsulta escalar SELECT AVG(cuota_inscri) FROM concursante cuando se coloca en una cláusula WHERE?",
+"o": [
+"Un valor numérico simple que representa la media aritmética de la columna cuota_inscri",
+"Una lista de valores para usar con el operador IN",
+"Un error porque las subconsultas escalares no se permiten en WHERE",
+"Una tabla temporal derivada que debe tener un alias"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función de INSERT INTO tabla SELECT ... en comparación con INSERT INTO tabla VALUES?",
+"o": [
+"INSERT INTO tabla SELECT copia datos desde otra tabla aplicando transformaciones, VALUES inserta un único registro con valores explícitos",
+"INSERT INTO tabla VALUES es más rápido siempre",
+"INSERT INTO tabla SELECT solo funciona con la misma base de datos",
+"INSERT INTO tabla VALUES no permite múltiples inserciones simultáneas"
+],
+"a": 0
+},
+{
+"q": "¿Qué sucede cuando ejecutas UPDATE tabla sin la cláusula WHERE?",
+"o": [
+"Se actualizan todas las filas de la tabla, operación global y potencialmente peligrosa",
+"MySQL lanza un error obligando a especificar la condición WHERE",
+"Solo se actualiza la primera fila de la tabla",
+"Se actualiza únicamente la fila con la clave primaria más alta"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia entre DELETE con subconsulta NOT IN y DELETE simple?",
+"o": [
+"DELETE con NOT IN elimina filas cuya clave no aparece en una lista devuelta por subconsulta, DELETE simple elimina según condiciones directas",
+"DELETE con NOT IN es más rápido en cualquier situación",
+"DELETE simple no puede usarse con múltiples condiciones",
+"Ambas tienen idéntico comportamiento y velocidad de ejecución"
+],
+"a": 0
+},
+{
+"q": "¿Qué función cumple ROLLBACK TO SAVEPOINT en comparación con ROLLBACK?",
+"o": [
+"ROLLBACK TO SAVEPOINT deshace solo hasta el punto de guardado especificado, ROLLBACK deshace la transacción completa",
+"ROLLBACK TO SAVEPOINT requiere confirmación manual, ROLLBACK es automática",
+"ROLLBACK TO SAVEPOINT no funciona con DELETE, solo con INSERT",
+"Ambas tienen idéntico efecto dentro de una transacción"
+],
+"a": 0
+},
+{
+"q": "¿Qué sucede cuando aplicas GROUP BY sobre una columna que contiene valores NULL?",
+"o": [
+"MySQL agrupa todos los NULL en un grupo único identificado como NULL",
+"Los NULL se excluyen automáticamente de la agrupación",
+"Se genera un error obligando a filtrar NULL previamente",
+"Cada NULL forma un grupo independiente sin fusionarse"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia entre MONTH(fecha) y YEAR(fecha)?",
+"o": [
+"MONTH extrae el número de mes (1-12), YEAR extrae el año completo de una fecha",
+"MONTH devuelve la fecha completa, YEAR devuelve solo números",
+"YEAR siempre devuelve un número de 2 dígitos, MONTH devuelve 4 dígitos",
+"MONTH y YEAR devuelven valores de texto, no numéricos"
+],
+"a": 0
+},
+{
+"q": "¿Qué diferencia existe entre COUNT(columna) y COUNT(*) cuando se usa con GROUP BY y hay valores NULL?",
+"o": [
+"COUNT(columna) cuenta solo filas con valor no-NULL en esa columna por grupo, COUNT(*) cuenta todas las filas del grupo incluyendo NULLs",
+"COUNT(*) solo cuenta valores no-NULL",
+"COUNT(columna) incluye NULL en el recuento",
+"Ambas dan exactamente el mismo resultado en cualquier circumstancia con GROUP BY"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la principal diferencia entre SET @variable = valor y SET @variable := valor?",
+"o": [
+"Ambos operadores funcionan para asignar valores a variables de sesión, := es sintaxis preferida en MySQL",
+"El operador = solo funciona dentro de SELECT, := solo en UPDATE",
+"= solo asigna números, := solo asigna textos",
+":= genera un error en versiones recientes de MySQL"
+],
+"a": 0
+},
+{
+"q": "¿Qué devuelve DATEDIFF(CURDATE(), fecha_columna)?",
+"o": [
+"El número de días transcurridos entre la fecha actual y la fecha almacenada en la columna",
+"El número de horas entre ambas fechas",
+"Devuelve una fecha formateada como 'YYYY-MM-DD'",
+"Devuelve 1 si ambas fechas son iguales, 0 si son diferentes"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función de DATE_FORMAT(fecha, '%d/%m/%Y') en una consulta SELECT?",
+"o": [
+"Formatea una columna de fecha para mostrar el día, mes y año separados por barras en formato específico",
+"Convierte una fecha a un número UNIX timestamp",
+"Calcula la diferencia entre dos fechas",
+"Compara si una fecha es mayor que otra devolviendo verdadero/falso"
+],
+"a": 0
+},
+{
+"q": "¿Qué sucede cuando usas LEFT JOIN con IFNULL y no hay coincidencia en la tabla derecha?",
+"o": [
+"El IFNULL reemplaza el valor NULL de la tabla derecha con el valor especificado, permitiendo mostrar información de la izquierda sin huecos",
+"Se genera un error porque IFNULL no funciona con LEFT JOIN",
+"La fila se excluye completamente del resultado",
+"Se rellena automáticamente con ceros en lugar de NULL"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia entre UNION y UNION ALL respecto a la velocidad de ejecución?",
+"o": [
+"UNION ALL es más rápido porque no busca ni elimina duplicados, UNION requiere más procesamiento",
+"UNION es siempre más rápido independientemente de los datos",
+"Ambas tienen idéntica velocidad de ejecución",
+"UNION ALL es más lento porque mantiene duplicados en memoria"
+],
+"a": 0
+},
+{
+"q": "¿Qué función tiene HAVING en comparación con WHERE cuando se usa con GROUP BY?",
+"o": [
+"WHERE filtra filas antes de agrupar, HAVING filtra grupos después de ejecutar funciones de agregado",
+"HAVING filtra antes de agrupar, WHERE filtra después",
+"Ambas cláusulas filtran de idéntica manera",
+"HAVING es obligatoria cuando se usa GROUP BY, WHERE es opcional"
+],
+"a": 0
+}
+]

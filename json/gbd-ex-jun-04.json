@@ -1,0 +1,185 @@
+Voy a leer nuevamente los documentos para asegurar máxima precisión en el contenido y generar 20 preguntas completamente nuevas.
+Perfecto. Ahora generaré una cuarta batería completamente nueva de 20 preguntas, basada en contenido no utilizado anteriormente y garantizando máxima fidelidad a los documentos.
+
+[
+{
+"q": "¿Cuál es la función de SET @hoy = CURRENT_DATE()?",
+"o": [
+"Crea/asigna una variable de sesión @hoy con la fecha actual del sistema usando el operador =",
+"Devuelve la fecha actual sin asignarla a ninguna variable",
+"Modifica el formato de fecha de la base de datos al formato CURRENT_DATE",
+"Establece la fecha del sistema a la fecha actual"
+],
+"a": 0
+},
+{
+"q": "¿Qué diferencia existe entre SELECT nombre FROM concursante y SELECT DISTINCT nombre FROM concursante?",
+"o": [
+"DISTINCT devuelve solo los nombres únicos eliminando repeticiones, mientras que sin DISTINCT se muestran todos incluyendo duplicados",
+"Sin DISTINCT es más rápido que con DISTINCT",
+"DISTINCT solo funciona con columnas de tipo VARCHAR",
+"Ambas tienen exactamente el mismo resultado"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función de IFNULL(e.nombre, 'SIN EQUIPO') en una consulta con LEFT JOIN?",
+"o": [
+"Reemplaza valores NULL de la tabla derecha con el texto 'SIN EQUIPO' cuando no hay coincidencia en el join",
+"Elimina todas las filas que contienen NULL",
+"Valida que todos los valores de nombre no sean NULL antes del join",
+"Convierte NULL automáticamente a una cadena vacía sin especificar valor"
+],
+"a": 0
+},
+{
+"q": "¿Qué sucede cuando ejecutas INSERT INTO tabla VALUES (...) sin especificar la lista de columnas?",
+"o": [
+"Se deben proporcionar valores para TODAS las columnas de la tabla en el mismo orden que aparecen en la definición",
+"Solo es necesario proporcionar valores para las columnas con clave primaria",
+"Se pueden omitir valores para columnas que permitan NULL",
+"Genera un error obligando a especificar los nombres de las columnas"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia entre DELETE FROM tabla WHERE condición y DELETE FROM tabla sin WHERE?",
+"o": [
+"Con WHERE se eliminan solo filas que cumplen la condición, sin WHERE se eliminan TODAS las filas de la tabla",
+"Sin WHERE es más seguro porque hace una copia de seguridad automática",
+"Con WHERE solo funciona con claves primarias",
+"Ambas tienen exactamente el mismo efecto"
+],
+"a": 0
+},
+{
+"q": "¿Qué función cumple START TRANSACTION en una sesión MySQL?",
+"o": [
+"Inicia un bloque transaccional donde se pueden agrupar múltiples operaciones SQL que se confirman o revierten como conjunto",
+"Desactiva automáticamente el autocommit de la sesión",
+"Crea un punto de guardado intermedio sin necesidad de SAVEPOINT",
+"Es equivalente a ejecutar COMMIT automáticamente"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función de ORDER BY megusta DESC, cdequipo en una consulta SELECT?",
+"o": [
+"Ordena primero por megusta descendente (mayor a menor) y luego por cdequipo ascendente como criterio secundario",
+"Ordena por megusta ascendente y luego por cdequipo descendente",
+"Ordena solo por megusta ignorando cdequipo como criterio secundario",
+"Ordena simultáneamente ambas columnas en descendente"
+],
+"a": 0
+},
+{
+"q": "¿Qué sucede cuando usas COUNT(*) en comparación con COUNT(cdequipo) en una tabla con valores NULL?",
+"o": [
+"COUNT(*) cuenta TODAS las filas incluyendo NULL, COUNT(cdequipo) cuenta solo filas con valores no-NULL",
+"COUNT(cdequipo) es más rápido siempre porque omite NULL",
+"Ambas dan exactamente el mismo recuento",
+"COUNT(*) solo cuenta valores NULL, COUNT(cdequipo) cuenta valores no-NULL"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función de ROUND(10/3, 2)?",
+"o": [
+"Divide 10 entre 3 y redondea el resultado a 2 decimales, devolviendo 3.33",
+"Redondea solo la parte entera sin considerar decimales",
+"Devuelve el resultado truncado sin decimales",
+"Suma 2 decimales al resultado de 10/3 sin redondeo"
+],
+"a": 0
+},
+{
+"q": "¿Qué devuelve DATEDIFF(CURDATE(), fecha_inscri)?",
+"o": [
+"El número de días transcurridos entre la fecha actual y la fecha almacenada",
+"El número de horas entre ambas fechas",
+"Devuelve una fecha formateada como diferencia",
+"Devuelve 1 si las fechas son iguales, 0 si son diferentes"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función de la cláusula HAVING en comparación con WHERE?",
+"o": [
+"HAVING filtra grupos DESPUÉS de ejecutar funciones de agregado, WHERE filtra filas ANTES de agrupar",
+"WHERE filtra después de agrupar, HAVING filtra antes",
+"Ambas cláusulas filtran de forma idéntica en cualquier contexto",
+"HAVING es obligatoria cuando se usa GROUP BY, WHERE es opcional"
+],
+"a": 0
+},
+{
+"q": "¿Qué devuelve SELECT ALL cdconcur FROM participa?",
+"o": [
+"Muestra todas las filas incluyendo duplicados; ALL es el comportamiento por defecto y normalmente se omite",
+"Filtra y elimina los valores duplicados automáticamente",
+"Solo funciona con valores numéricos",
+"Genera un error porque ALL requiere especificar una condición"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia entre una subconsulta escalar y una subconsulta que devuelve lista?",
+"o": [
+"La subconsulta escalar devuelve UN solo valor para usar en comparaciones simples, la de lista devuelve múltiples filas para usar con IN/ALL/ANY",
+"La subconsulta escalar se ejecuta una sola vez, la de lista se ejecuta por cada fila",
+"La subconsulta de lista requiere alias obligatorio, la escalar no",
+"Ambas tienen sintaxis y comportamiento idénticos"
+],
+"a": 0
+},
+{
+"q": "¿Qué función tiene DATE_FORMAT(MAX(fecha_inscri), '%d/%m/%Y')?",
+"o": [
+"Extrae la fecha más reciente de una columna y la formatea en formato día/mes/año con barras",
+"Convierte todas las fechas a UNIX timestamp",
+"Calcula el número de días entre dos fechas",
+"Devuelve la fecha como número entero sin formato"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la diferencia entre UNION y UNION ALL?",
+"o": [
+"UNION elimina duplicados del resultado combinado, UNION ALL mantiene TODOS los registros incluyendo repetidos",
+"UNION ALL es más rápido porque elimina duplicados más eficientemente",
+"UNION requiere el mismo número de columnas, UNION ALL permite columnas distintas",
+"UNION ALL solo funciona con tablas de la misma base de datos"
+],
+"a": 0
+},
+{
+"q": "¿Qué sucede cuando ejecutas una subconsulta escalar en la lista SELECT de otra consulta?",
+"o": [
+"Calcula un valor por cada fila devolvida añadiendo columnas adicionales derivadas de subconsultas relacionadas",
+"Devuelve un error porque no se permiten subconsultas en SELECT",
+"Solo devuelve un valor único para toda la consulta",
+"Devuelve una tabla temporal que debe filtrarse con WHERE"
+],
+"a": 0
+},
+{
+"q": "¿Cuál es la función de AUTOCOMMIT = 0 en una sesión antes de usar LOCK TABLE?",
+"o": [
+"Desactiva la confirmación automática de cambios, permitiendo control manual mediante COMMIT o ROLLBACK después del bloqueo",
+"Activa bloqueos de lectura automáticamente",
+"Elimina todos los bloqueos existentes en la sesión actual",
+"Es opcional y no afecta el funcionamiento del bloqueo de tabla"
+],
+"a": 0
+},
+{
+"q": "¿Qué devuelve SELECT * FROM tabla LIMIT 5,10?",
+"o": [
+"Salta las primeras 5 filas (offset) y devuelve las 10 filas siguientes (paginación)",
+"Devuelve exactamente 5 + 10 = 15 filas en total",
+"Devuelve la fila número 5 hasta la número 10",
+"Es equivalente a usar LIMIT 15 sin desplazamiento"
+],
+"a": 0
+}
+]
